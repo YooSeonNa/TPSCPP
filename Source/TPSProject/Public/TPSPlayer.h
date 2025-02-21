@@ -65,6 +65,6 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	class UPlayerMoveComponent* MoveComp;
-	UPROPERTY(EditAnywhere)
-	class UPlayerFireComponent* FireComp;
+	//UPROPERTY(EditAnywhere)
+	//class UPlayerFireComponent* FireComp;
 };

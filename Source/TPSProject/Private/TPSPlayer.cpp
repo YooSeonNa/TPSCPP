@@ -106,7 +106,7 @@ ATPSPlayer::ATPSPlayer()
 	GetMovementComponent()->GetNavAgentPropertiesRef().bCanCrouch = true;
 
 	MoveComp = CreateDefaultSubobject<UPlayerMoveComponent>( TEXT("MoveComp") );
-	FireComp = CreateDefaultSubobject<UPlayerFireComponent>( TEXT("FireComp") );
+	//FireComp = CreateDefaultSubobject<UPlayerFireComponent>( TEXT("FireComp") );
 }
 
 // Called when the game starts or when spawned
