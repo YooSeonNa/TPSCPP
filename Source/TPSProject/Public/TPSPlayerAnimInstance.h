@@ -44,6 +44,9 @@ public:
 	void PlayAttackAnim();
 
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float Pitch;
+
 
 
 };

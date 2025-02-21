@@ -146,8 +146,14 @@ void ATPSPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	if( PlayerInput )
 	{
 		// 컴포넌트에 입력 바인딩 처리를 하도록 호출
-		MoveComp->SetupInputBinding(PlayerInput);
-		FireComp->SetupInputBinding( PlayerInput );		
+		//MoveComp->SetupInputBinding(PlayerInput);
+		//FireComp->SetupInputBinding( PlayerInput );				
+
+		// 일반 델리게이트
+		//TestDelegate.ExecuteIfBound();
+
+		// 멀티캐스트 델리게이트를 호출해준다.
+		InputBindingDelegate.Broadcast( PlayerInput );
 	}
 }
 

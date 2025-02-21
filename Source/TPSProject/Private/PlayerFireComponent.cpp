@@ -32,7 +32,7 @@ void UPlayerFireComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	me = Cast<ATPSPlayer>( GetOwner() );
+	//me = Cast<ATPSPlayer>( GetOwner() );
 	if( me == nullptr )	return;
 
 	tpsCamComp = me->tpsCamComp;

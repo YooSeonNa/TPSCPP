@@ -7,6 +7,12 @@
 #include "../../../../Plugins/EnhancedInput/Source/EnhancedInput/Public/InputActionValue.h"
 #include "TPSPlayer.generated.h"
 
+DECLARE_DELEGATE(FMyDelegate)
+//DECLARE_DELEGATE_OneParam(FDelegate_One, int32)
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDelegate_DynamicMulti)
+
+DECLARE_MULTICAST_DELEGATE_OneParam(FInputBindingDelegate, class UEnhancedInputComponent*)
+
 UCLASS()
 class TPSPROJECT_API ATPSPlayer : public ACharacter
 {
@@ -15,6 +21,8 @@ class TPSPROJECT_API ATPSPlayer : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ATPSPlayer();
+	//FMyDelegate TestDelegate;
+	FInputBindingDelegate InputBindingDelegate;
 
 protected:
 	// Called when the game starts or when spawned

@@ -33,6 +33,9 @@ void UTPSPlayerAnimInstance::NativeUpdateAnimation( float DeltaSeconds )
 	}	
 
 	//isInAir = player->GetCharacterMovement()->IsFalling();
+
+	// 주인공의 AimRotation값을 가져와서 Pitch값을 채우고 싶다.
+	Pitch = player->GetBaseAimRotation().Pitch;
 }
 
 void UTPSPlayerAnimInstance::PlayAttackAnim()

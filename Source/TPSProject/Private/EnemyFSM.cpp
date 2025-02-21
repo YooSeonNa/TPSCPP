@@ -172,22 +172,24 @@ void UEnemyFSM::AttackState()
 		currentTime = 0.0f;
 		Anim->bAttackPlay = true;
 	}
-
-	// 타겟이 공격범위를 벗어나면 이동상태로 전환하고 싶다.
-	// 타겟과의 거리가 필요하다.
-	float distance = FVector::Distance(target->GetActorLocation(), me->GetActorLocation());
-
-	// 타겟과의 거리가 공격 범위를 벗어나면
-	if( distance > attackRange )
+	else
 	{
-		// 상태를 이동상태로 전환하고 싶다.
-		mState = EEnemyState::Move;
+		// 타겟이 공격범위를 벗어나면 이동상태로 전환하고 싶다.
+		// 타겟과의 거리가 필요하다.
+		float distance = FVector::Distance(target->GetActorLocation(), me->GetActorLocation());
 
-		// 애니메이션 상태 동기화
-		Anim->AnimState = mState;
+		// 타겟과의 거리가 공격 범위를 벗어나면
+		if( distance > attackRange )
+		{
+			// 상태를 이동상태로 전환하고 싶다.
+			mState = EEnemyState::Move;
+		
+			// 애니메이션 상태 동기화
+			Anim->AnimState = mState;
 
-		// 새로운 랜덤 위치 가져오기
-		GetRandomPositionInNavMesh( me->GetActorLocation() , 500.0f , randomPos );
+			// 새로운 랜덤 위치 가져오기
+			GetRandomPositionInNavMesh( me->GetActorLocation() , 500.0f , randomPos );
+		}
 	}
 }
 
