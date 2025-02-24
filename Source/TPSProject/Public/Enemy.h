@@ -30,4 +30,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = FSMComponent)
 	class UEnemyFSM* fsm;
 
+	// 체력을 머리위에 배치하고 싶다.
+	UPROPERTY( EditDefaultsOnly , BlueprintReadOnly )
+	class UWidgetComponent*	HPComp;
+
 };

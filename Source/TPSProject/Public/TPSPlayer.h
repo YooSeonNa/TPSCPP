@@ -67,4 +67,10 @@ public:
 	class UPlayerMoveComponent* MoveComp;
 	//UPROPERTY(EditAnywhere)
 	//class UPlayerFireComponent* FireComp;
+
+
+	// C++에서도 블루프린트에서도 둘다 사용 가능하게 하고 싶다.
+	UFUNCTION(BlueprintNativeEvent)
+	void ChooseSniperGun(bool bSniperGun);
+
 };

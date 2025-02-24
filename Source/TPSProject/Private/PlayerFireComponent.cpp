@@ -166,6 +166,7 @@ void UPlayerFireComponent::ChangeToGrenadeGun( const FInputActionValue& inputVal
 {
 	// 유탄총 사용 중으로 체크
 	bUsingGrenadeGun = true;
+	me->ChooseSniperGun( false );
 	SniperGunMesh->SetVisibility( false );
 	GunMeshComp->SetVisibility( true );
 }
@@ -173,6 +174,7 @@ void UPlayerFireComponent::ChangeToGrenadeGun( const FInputActionValue& inputVal
 void UPlayerFireComponent::ChangeToSniperGun( const FInputActionValue& inputValue )
 {
 	bUsingGrenadeGun = false;
+	me->ChooseSniperGun( true );
 	SniperGunMesh->SetVisibility( true );
 	GunMeshComp->SetVisibility( false );
 }

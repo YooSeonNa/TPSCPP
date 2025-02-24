@@ -157,3 +157,8 @@ void ATPSPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	}
 }
 
+void ATPSPlayer::ChooseSniperGun_Implementation( bool bSniperGun )
+{
+
+}
+
